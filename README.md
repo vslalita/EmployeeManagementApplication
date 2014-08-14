@@ -1,0 +1,2 @@
+DesignPatternsAssignment2
+=========================
