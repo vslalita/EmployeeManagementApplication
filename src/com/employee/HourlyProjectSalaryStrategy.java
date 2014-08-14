@@ -11,6 +11,6 @@ public class HourlyProjectSalaryStrategy implements SalaryStrategy{
 		// TODO Auto-generated method stub
 		ArrayList<Integer> projectsDuration=e.projectDurationList;
 		Collections.sort(projectsDuration);
-		return (e.hourlySalary*e.hoursWorked)+(50*projectsDuration.get(0));
+		return (e.hourlySalary*e.hoursWorked)+(50*projectsDuration.get(projectsDuration.size()-1));
 	}
 }

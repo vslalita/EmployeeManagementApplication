@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class Company {
    
-	String companyName;
-	int companyPhone;
-    ArrayList<Employee> emplList=new ArrayList<Employee>();
+	private String companyName;
+	private int companyPhone;
+    private ArrayList<Employee> emplList=new ArrayList<Employee>();
     
     Company(String companyName,int companyPhone){
     	this.companyName=companyName;

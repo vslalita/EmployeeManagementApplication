@@ -16,7 +16,7 @@ public class CompanyGUI implements CompanyGUIAggregate{
 	
 	//Class for implementing Iterator
 	public class IteratorImpl implements Iterator<Employee>{
-		int pointer=0;
+		private int pointer=0;
 	    
 		@Override
 		public boolean hasNext() {
@@ -30,7 +30,7 @@ public class CompanyGUI implements CompanyGUIAggregate{
 		@Override
 		public Employee next() {
 			// TODO Auto-generated method stub
-			if(hasNext()){
+			if(this.hasNext()){
 				System.out.println(emplList.size());
 				Employee emp=emplList.get(pointer);
 				pointer=pointer+1;
@@ -46,5 +46,13 @@ public class CompanyGUI implements CompanyGUIAggregate{
 			pointer=pointer-1;
 		}
 
+	}
+	
+	public void displayEmployessDetails(){
+		Iterator<Employee> iterator=this.getIteratorInstance();
+		while(iterator.hasNext()){
+			Employee emp=iterator.next();
+			System.out.println("Employee: "+emp.getName());
+		}
 	}
 }

@@ -3,9 +3,9 @@ package com.employee;
 import java.util.ArrayList;
 
 public class Employee {
-   String name;
-   int id;
-   String email;
+   private String name;
+   private int id;
+   private String email;
    double hourlySalary;
    int hoursWorked;
    double benefits;
@@ -40,6 +40,10 @@ public class Employee {
    
    public double calculateSalary(){
 	   return ss.calculate(this);
+   }
+   
+   public String getName(){
+	   return this.name;
    }
 	
 }
