@@ -3,14 +3,14 @@ package com.employee;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class CompanyGUI {
+public class CompanyGUI implements CompanyGUIAggregate{
    ArrayList<Employee> emplList;
    
 	CompanyGUI(ArrayList<Employee> emplList){
 		this.emplList=emplList;
 	}
 	
-	public IteratorImpl getIteratorInstance(){
+	public Iterator<Employee> getIteratorInstance(){
 		return new IteratorImpl();
 	}
 	
